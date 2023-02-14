@@ -19,9 +19,9 @@ const App = () => {
 
   return (
     <main style={{ borderColor: toRGB(rgb), ...themes.light }}>
-      <ColorSwatch {...rgb} />
-      <ColorInputs {...rgb} />
-      <ColorSliders {...rgb} dispatch={dispatch} />
+      <ColorSwatch />
+      {/* <ColorInputs {...rgb} /> */}
+      <ColorSliders/>
     </main>
   );
 };

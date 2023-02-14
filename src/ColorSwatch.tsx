@@ -1,6 +1,11 @@
+import { RGBContext } from "./context";
 import { RGBColorType } from "./types";
+import { useContext } from "react";
 
-export const ColorSwatch = ({red,green, blue}: RGBColorType) => {
+export const ColorSwatch = () => {
+
+  const {red, green, blue} = useContext(RGBContext)
+
     return (
         <div
           className="color-swatch"
