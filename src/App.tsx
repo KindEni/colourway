@@ -8,6 +8,10 @@ import { toRGB } from './utilities';
 import { reducer } from './reducer';
 import { ThemeContext } from './theme-context';
 
+import { ColorAdjustment } from './colorAdjustment';
+import { ColorSlider } from './ColorSlider';
+import { ColorInput } from './ColorInput';
+
 const App = () => {
   const themes = React.useContext(ThemeContext);
 
@@ -21,7 +25,9 @@ const App = () => {
     <main style={{ borderColor: toRGB(rgb), ...themes.light }}>
       <ColorSwatch />
       {/* <ColorInputs {...rgb} /> */}
-      <ColorSliders/>
+      {/* <ColorSliders/> */}
+      <ColorAdjustment Adjustment={ColorSlider}/>
+      <ColorAdjustment Adjustment={ColorInput}/>
     </main>
   );
 };
