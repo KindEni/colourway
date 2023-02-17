@@ -11,7 +11,7 @@ const themes = {
     }
 };
 
-export const ThemeContext = React.createContext(themes);
+export const ThemeContext = React.createContext(themes); // initial value
 
 export const ThemeProvider = ({children} : {children: React.ReactNode}) => {
     return (
